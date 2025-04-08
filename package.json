@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio website that showcases my front-end development skills. It contains examples of projects I have worked on, my contact information, and a brief introduction about myself.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laszlodus/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/laszlodus/portfolio/issues"
+  },
+  "homepage": "https://github.com/laszlodus/portfolio#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
