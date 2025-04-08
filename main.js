@@ -18,18 +18,24 @@ class HeadMessage {
     }
 
     init() {
-        this.interval = setInterval(() => {
+        const interval = setInterval(() => {
             if (this.index < this.text.length) {
-                this.message.innerHTML += this.text[this.index];
+                this.message.textContent += this.text[this.index];
                 this.index++;
             } else {
-                clearInterval(this.interval);
+                clearInterval(interval);
                 
                 setTimeout(() => {
                     document.querySelector('.new-background').style.transform = "translateY(0)";
-                }, 1200);
+                    this.setColour();
+                }, 200);
+                
             }
         }, 50);
+    }
+
+    setColour() {
+        this.message.classList.add('new-color');
     }
 }
 
@@ -45,7 +51,7 @@ class Menu {
     }
 
     init() {
-        this.navBtn.addEventListener('click',() =>  this.toggleMenu());
+        this.navBtn.addEventListener('click',() => this.toggleMenu());
         this.navLinks.forEach(links => {
             links.addEventListener('click',() => this.closeMenu());
         });
@@ -76,6 +82,27 @@ const navLinks = document.querySelectorAll(".nav-menu a");
 const menu = new Menu(navBtn, navMenu);
 
 
+class Form {
+    constructor(textarea, remainCharacter, btn) {
+        this.text = textarea;
+        this.character = textarea.maxLength;
+        this.remain = remainCharacter;
+        this.btn = btn;
+        
+        this.text.addEventListener('input', this.init.bind(this));
+    }
+
+    init() {
+        const remainC = this.character - this.text.value.length;
+        this.remain.textContent = `${remainC} character left!`;
+    }
+}
+
+const textarea = document.getElementById('message');
+const remainCharacter = document.querySelector('.character-number');
+const btn = document.querySelector('.btn-send');
+
+const form = new Form(textarea, remainCharacter, btn);
 
 
 
