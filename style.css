@@ -202,7 +202,7 @@ p, a {
     background-color: var(--lightGrey);
 }
 
-.about-container, .projects-grid-container, .contact-container {
+.about-container, .projects-grid-container, .contact-container, .copyright {
     width: 120rem;
     max-width: 90%;
     min-height: 100vh;
