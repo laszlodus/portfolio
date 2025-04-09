@@ -105,5 +105,38 @@ const btn = document.querySelector('.btn-send');
 const form = new Form(textarea, remainCharacter, btn);
 
 
+class SendForm {
+    constructor(formContainer) {
+        this.formCont = formContainer;
 
+        this.formCont.addEventListener('submit', this.init.bind(this));
+    }
+
+    async init(e) {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+
+        try {
+            const response = await fetch('https://formspree.io/f/mjvqdqql', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+
+            if (response.ok) {
+                this.formCont.reset();
+                alert('Your message has been sent.');
+            } else {
+                alert('An error occurred. Please try again.');
+            }
+        } catch (error) {
+            console.error(error.message);
+        }
+    } 
+}
+
+const formContainer = document.querySelector('.form-container');
+if (formContainer) new SendForm(formContainer); 
 
