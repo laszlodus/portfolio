@@ -202,7 +202,7 @@ p, a {
     background-color: var(--lightGrey);
 }
 
-.about-container, .projects-grid-container, .contact-container, .copyright {
+.about-container, .projects-grid-container, .contact-container {
     width: 120rem;
     max-width: 90%;
     min-height: 100vh;
@@ -346,6 +346,10 @@ p, a {
 /* Footer */
 /* ****************************************************************************************/
 .copyright {
+    width: 120rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     text-align: center;
