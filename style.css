@@ -227,7 +227,6 @@ p, a {
     padding: 0 2rem;
 }
 
-
 .faded {
     opacity: 0.5; 
 }
@@ -294,7 +293,6 @@ p, a {
     width: 0%;
     left: 50%;
     height: 1px;
-    bottom: 0;
     background-color: var(--viola);
     transition: width 300ms ease, left 300ms ease;
 }
@@ -325,7 +323,7 @@ p, a {
 .form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 30rem;
+    max-width: 40rem;
     gap: 2rem;  
 }
 
@@ -341,6 +339,20 @@ p, a {
     padding: 0.5rem;
     font-weight: 600;
 }
+
+.cont-icon i {
+    padding: 0 2rem;
+    color: var(--black);
+}
+
+.icon-linkedin:hover i {
+    color: #0A66C2;
+}
+
+.icon-github:hover i {
+    color: #171515;
+}
+
 
 /* ****************************************************************************************/
 /* Footer */
