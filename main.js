@@ -137,5 +137,5 @@ const formContainer = document.querySelector(".form-container");
 if (formContainer) new SendForm(formContainer);
 
 // Footer
-const year = new Date().getFullYear();
+const year = 2025;
 document.getElementById("year").textContent = year;
