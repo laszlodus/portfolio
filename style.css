@@ -152,6 +152,10 @@ a {
   font-weight: 600;
   color: var(--lightGrey);
 }
+
+h1 {
+  text-shadow: 0px 5px 10px grey;
+}
 .header-text {
   color: #fff;
   text-shadow: 0px 3px 10px black;
@@ -499,4 +503,7 @@ a {
 
 @media (max-width: 36em) {
   /*576px*/
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
