@@ -20,20 +20,8 @@ class HeadMessage {
       if (this.index < this.text.length) {
         this.message.textContent += this.text[this.index];
         this.index++;
-      } else {
-        clearInterval(interval);
-
-        setTimeout(() => {
-          document.querySelector(".new-background").style.transform =
-            "translateY(0)";
-          this.setColour();
-        }, 200);
       }
     }, 50);
-  }
-
-  setColour() {
-    this.message.classList.add("new-color");
   }
 }
 
