@@ -293,6 +293,7 @@ h1 {
   border: 1px solid var(--white);
   padding: 3rem;
 }
+
 .project-container section {
   display: flex;
   flex-direction: column;
