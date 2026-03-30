@@ -20,6 +20,8 @@ class HeadMessage {
       if (this.index < this.text.length) {
         this.message.textContent += this.text[this.index];
         this.index++;
+      } else {
+        clearInterval(interval);
       }
     }, 50);
   }
@@ -28,7 +30,7 @@ class HeadMessage {
 // Nav menu
 
 class Menu {
-  constructor(navBtn, navMenu) {
+  constructor(navBtn, navMenu, navLinks) {
     this.navBtn = navBtn;
     this.navMenu = navMenu;
     this.navLinks = navLinks;
@@ -65,14 +67,13 @@ class Menu {
 const navBtn = document.querySelector(".nav-btn");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
-const menu = new Menu(navBtn, navMenu);
+const menu = new Menu(navBtn, navMenu, navLinks);
 
 class Form {
-  constructor(textarea, remainCharacter, btn) {
+  constructor(textarea, remainCharacter) {
     this.text = textarea;
     this.character = textarea.maxLength;
     this.remain = remainCharacter;
-    this.btn = btn;
 
     this.text.addEventListener("input", this.init.bind(this));
   }
@@ -117,6 +118,7 @@ class SendForm {
       }
     } catch (error) {
       console.error(error.message);
+      alert("Something went wrong. Please try again.");
     }
   }
 }
