@@ -104,7 +104,7 @@ h4 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background-color: rgba(40, 38, 38, 0.472);
+  background-color: var(--darkGrey);
 }
 
 .nav-menu li {
